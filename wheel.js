@@ -128,7 +128,7 @@ canvas.addEventListener('click', (event) => {
 // Event listener for hex input
 hexInput.addEventListener('input', () => {
     const hex = hexInput.value;
-    if (/^#([0-9A-F]{3}){1,2}$/i.test(hex)) {
+    if (/^#[0-9A-F]{6}$/i.test(hex)) {
         const [r, g, b] = hexToRgb(hex);
         const rgbColor = `rgb(${r}, ${g}, ${b})`;
         updateSelectedColor(rgbColor); // Update position directly from RGB
